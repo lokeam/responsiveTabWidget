@@ -1,0 +1,1248 @@
+
+/* fonts */
+/*!
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */.fa.fa-pull-left,.fa.pull-left{margin-right:.3em}.fa,.fa-stack{display:inline-block}.fa-fw,.fa-li{text-align:center}@font-face{font-family:FontAwesome;src:url('http://tsm-fonts.s3.amazonaws.com/lineupwidgetfonts/fontawesome-webfont.eot?v=4.5.0');src:url('http://tsm-fonts.s3.amazonaws.com/lineupwidgetfonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'),url('http://tsm-fonts.s3.amazonaws.com/lineupwidgetfonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'),url('http://tsm-fonts.s3.amazonaws.com/lineupwidgetfonts/fontawesome-webfont.woff?v=4.5.0') format('woff'),url('http://tsm-fonts.s3.amazonaws.com/lineupwidgetfonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'),url('http://tsm-fonts.s3.amazonaws.com/lineupwidgetfonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');font-weight:400;font-style:normal}.fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.28571429em}.fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}.fa.fa-pull-right,.fa.pull-right{margin-left:.3em}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em}.fa-li.fa-lg{left:-1.85714286em}.fa-border{padding:.2em .25em .15em;border:.08em solid #eee;border-radius:.1em}.fa-pull-left{float:left}.fa-pull-right,.pull-right{float:right}.pull-left{float:left}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.fa-rotate-90{filter:progid: DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{filter:progid: DXImageTransform.Microsoft.BasicImage(rotation=2);-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{filter:progid: DXImageTransform.Microsoft.BasicImage(rotation=3);-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{filter:progid: DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);-webkit-transform:scale(-1,1);-ms-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{filter:progid: DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);-webkit-transform:scale(1,-1);-ms-transform:scale(1,-1);transform:scale(1,-1)}:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{filter:none}.fa-stack{position:relative;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff;}.fa-bullseye:before {content: "\f140";}.fa-envelope-o:before {content: "\f003";}.fa-twitter-square:before{content:"\f081"}.fa-facebook-square:before{content:"\f082"}.fa-twitter:before{content:"\f099"}.fa-facebook-f:before,.fa-facebook:before{content:"\f09a"}.fa-angle-left:before{content:"\f104"}.fa-youtube-square:before{content:"\f166"}.fa-youtube:before{content:"\f167"}.fa-youtube-play:before{content:"\f16a"}.fa-instagram:before{content:"\f16d"}
+
+
+/*
+width = calc 100% - padding;
+ */
+
+
+@font-face {
+    font-family: 'fontawesomeregular';
+    src: url('fontawesome-webfont.eot');
+    }
+
+@font-face {
+    font-family: 'fontawesomeregular';
+    src: url(data:application/font-woff2;charset=utf-8;base64,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) format('woff2'),
+         url(data:application/font-woff;charset=utf-8;base64,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) format('woff'),
+         url('fontawesome-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*default some stuff to good behavior*/
+img{border:none;}
+/*
+embedded iframe container:
+ */
+#lineup-container {
+    height: 100%;
+    background-color: #fff;
+}
+
+body {
+    color: #6d6d6d;
+    background-color: #000;
+    font-family: Oxygen,Helvetica,sans-serif;
+}
+
+body, html, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+    padding: 0;
+}
+
+
+ ul#nav {
+    display: block;
+    text-align: center;
+}
+
+li.etabs-nav.tab.active.hideTab {
+    display: none;
+}
+
+/*preloader and error views*/
+#overlay {
+  position:fixed;
+  z-index:99999;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgba(0,0,0,0.9);
+  transition: 1s 0.4s;
+}
+
+.forceaspectratio {
+    padding-top: 100%; /* forces 1:1 aspect ratio */
+}
+
+.img-container {
+    font: 0/0 a;
+}
+
+.img-container, .errormsg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align:center; /* Align center inline elements */
+}
+
+.img-container:before {
+    content: ' ';
+}
+
+.img-container:before, .errormsg:before {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.img-container img, .errormsg {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.errormsg {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*navigation tabs*/
+.etabs li.etabs-nav {
+    // border: 1px solid #becbd2;
+    background-color: #000;
+    border-bottom: none;
+    //margin: 0 0.25em;
+    display: inline-block;
+    //font-size: 18px;
+    //float: left;
+    position: relative;
+    height:100%;
+}
+
+li.etabs-nav {
+    background-color: #20212e;
+    -webkit-transition: background-color ease .5s;
+    -moz-transition: background-color ease .5s;
+    -o-transition: background-color ease .5s;
+    transition: background-color ease .5s;
+}
+
+li.etabs-nav a {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    //padding: 14px 16px 15px 13px;
+    padding:0px 15px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    height:100%;
+    line-height:44px;
+}
+
+.artistSlot li.etabs-nav a{
+    font-size:13px;
+    font-weight:400;
+}
+
+#navtabs li.active {
+    background: #fff;
+}
+
+.etabs {
+    background-color: #000;
+    font-family: Oswald;
+    text-align: center;
+    height:44px; 
+}
+
+#navtabs li.active a {
+    color: #000;
+}
+
+.etabs li.tab-current:after {
+    right: auto;
+    left: 100%;
+    width: 4000px;
+}
+
+ .etabs li.tab-current:before,  .etabs li.tab-current:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    right: 100%;
+    bottom: 0;
+    width: 1000px;
+}
+
+// legacy menu
+.etabs {
+    display: block;
+    font-weight: bold;
+    list-style:none;
+    margin: 0;
+    padding:0;
+    text-transform: uppercase;
+}
+
+/*main tab nav links*/
+.etabs-nav {
+    // -webkit-box-flex: 1;
+    // -webkit-flex: 1;
+    // -ms-flex: 1;
+    background-color: #000;
+    color: #fff;
+    // flex: 1;
+    //padding: 14px 16px 15px 13px;
+    text-align: center;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+
+/*tab container*/
+.tab-container {
+    // NOTE: DISPLAY TABLE CAUSES MOVEMENT BUG ON TAB CHANGE 
+    // display: table;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color:#212121;
+}
+
+/*sub navigation: mini calendar*/
+.minical {
+    background-color: #fff;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+    justify-content: center;
+    -moz-box-direction: column;
+    -webkit-box-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flexbox-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+}
+
+.minical .month, .minical .days {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.month {
+    background-color: #fff;
+    color: #fa5c19;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    /*padding: 11px 0px 10px 0px;*/
+    font-family: Oswald;
+    font-size: 16px;
+    height:34px;
+    line-height:34px;
+}
+
+.days {
+    background-color: #fff;
+    border-top: 1px solid #dbdbea;
+    //display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    //display: -moz-box;          OLD - Firefox 19- (buggy but mostly works) 
+    //display: -ms-flexbox;      /* TWEENER - IE 10 */
+    //display: -webkit-flex;     /* NEW - Chrome */
+    //display: flex;
+    //display: table;
+    width: 100%;
+    justify-content: center;
+    height:54px;
+    text-align:center;
+}
+
+.days a {
+    /* border-left: 1px solid #dddce3; */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    //display: block;
+    display: flex;
+    -moz-box-direction: column;
+    -webkit-box-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flexbox-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 5px 23px 9px 23px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ul.days li {
+    /*display: table-cell;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;*/
+    // flex:1 auto;
+    // -webkit-flex-grow: 1;
+    // flex-grow: 1;
+    border-left: 1px solid #dddce3;
+    display:inline-block;
+    vertical-align:top;
+    height:100%;
+}
+
+// ul.days li:first-child {
+//     border: none;
+// }
+// ul.days li:last-child {
+//     border-left: none;
+// }
+ul.days li:last-child {
+    border-right: 1px solid #dddce3;
+}
+
+.days a .dayofmonth {
+    color: #000;
+    font-weight: 200;
+    font-size:16px;
+    width:28px;
+    height:28px;
+}
+
+i {
+    line-height: 1;
+}
+
+ul.days li.active .dayofmonth {
+    background-color: #ff5c29;
+    color: #fff;
+    line-height:28px;
+    text-align: center;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    /* padding: 0%; */
+    position: relative;
+}
+
+.days span {
+    color: #868695;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    line-height:13px;
+}
+
+.places {
+    //display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    //display: -moz-box;          OLD - Firefox 19- (buggy but mostly works) 
+    //display: -ms-flexbox;      /* TWEENER - IE 10 */
+    //display: -webkit-flex;     /* NEW - Chrome */
+    //display: flex;
+    justify-content: center;
+    //-webkit-flex-direction: row;
+    //-ms-flexbox-direction: row;
+    //-ms-flex-direction: row;
+    //flex-direction: row;
+    /*padding: 15px 0;*/
+    text-transform: uppercase;
+    // display: table;
+    width: 100%;
+    text-align:center;
+}
+
+.tab-container .places {
+    background-color: #fff;
+}
+
+.places li {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    padding:0px 17px;
+    display:inline-block;
+    vertical-align:top;
+    height:100%;
+}
+
+.places li a {
+    padding: 4px 14px;
+    line-height:44px;
+    font-weight:400;
+}
+
+.places a {
+    color: #000;
+}
+
+.places a:hover, .places li.active a {
+    background: #fa5c19;
+    color: #fff;
+}
+
+
+/*--------00B flexible artist grid--------*/
+// remove margins for subview
+.dl-subview {
+    margin: 0!important;
+}
+
+ul.dl-menu.dl-menuopen.artists {
+    margin: 0px 0px 16px 0px;
+    overflow:hidden;
+}
+ul.dl-menu.dl-menuopen.dl-subview {
+    margin: 0!important;
+}
+
+/*large top objects*/
+.artists .artistSlot {
+    display: inline-block;
+    width: calc( 33% - 10px);
+    overflow:hidden;
+    // margin: 0 0 10px 10px;
+    float:left;
+}
+
+/*---text caption*/
+.artists .artistSlot .headliner .artistInfo {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.9)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.9)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.9)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.9)); /* Standard syntax (must be last) */
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 0 10px 15px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+.artists .artistSlot a {
+    display: block;
+    color: #fff;
+    position: relative;
+//  width: 100%;
+}
+
+.dl-subviewopen li.active {
+    background-color: #fff;
+}
+
+.dl-subviewopen li.active a {
+    color: #000;
+}
+
+img.featured {
+    max-width:100%;
+    height: auto;
+    opacity:0;
+}
+
+div.featured.topPadding {
+    padding-top: 20px;
+}
+.dl-subview div.featured.topPadding {
+    padding-top: 0;
+}
+.artists .artistSlot .artistInfo {
+    display: block;
+    color: #fff;
+    position: relative;
+    //width: 100%;
+}
+
+.artists .artistSlot .artistInfo p {
+    line-height: 23px;
+    margin: 0;
+    padding: 0;
+}
+
+.artists .mediaObj .artistInfo p:first-child {
+    line-height: 22px;
+}
+
+.artists .artistSlot .artistInfo p:first-child {
+    font-size: 20px;
+    line-height:23px;
+    /*font-family:'Oswald';*/
+    text-transform:capitalize;
+    font-weight:400;
+}
+.artists .featured .artistSlot .artistInfo p:first-child{
+	color:#fff;
+}
+.artists .featured~.artistSlot .artistInfo p:first-child,
+#nested-tab-2 .artists .artistSlot .artistInfo p:first-child,
+#nested-tab-3 .artists .artistSlot .artistInfo p:first-child
+{
+    font-size:17px;
+    line-height:20px;
+}
+
+.artists .artistSlot .globalschedule .artistInfo p:first-child {
+    font-family:'Oswald';
+    text-transform:uppercase;
+}
+
+.artists .artistSlot .artistInfo p:last-child {
+    font-size: 14px;
+	text-transform:capitalize;
+}
+
+#nested-tab-1 .artists .artistSlot .artistInfo p:last-child {
+    color: #ff5d2b;
+}
+
+#nested-tab-2 ul.dl-menu.dl-menuopen.artists, #nested-tab-3 ul.dl-menu.dl-menuopen.artists {
+    margin: 0 0 16px 0px;
+}
+
+.artists li a div p span.artistTime {
+    color: #ff5d2b;
+}
+
+.artists li a div p span.artistPlace {
+    color: #a6a6a6;
+    display:block;
+}
+
+.artists .headline {
+    margin: 0 0 12px 12px;
+}
+
+li.artistSlot.headline {
+    /*width: 31.15%;
+    width:calc( 33% - 10px );*/
+}
+
+li.artistSlot.headline a.headliner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 0px;
+    padding-bottom: 52%;
+}
+
+/*.artists .mediaObj {
+    border-top: 1px solid #777880;
+}*/
+
+.artist-row-separator{
+    width:100%;
+    height:1px;
+    float:left;
+    clear:both;
+    display:none;
+}
+#nested-tab-2 .dl-menuopen .artist-row-separator:first-child,
+#nested-tab-3 .dl-menuopen .artist-row-separator:first-child{
+    display:none;
+}
+
+.panel-container .dl-subview.dl-menuopen .artist-row-separator,
+#nested-tab-2 .panel-container .dl-subview.dl-menuopen .artist-row-separator,
+#nested-tab-3 .panel-container .dl-subview.dl-menuopen .artist-row-separator{
+    display:none;
+}
+
+.artists .mediaObj.dl-subviewopen {
+    border:none;
+}
+
+/*smaller media objects*/
+div.featured {
+    margin-bottom:0px;
+    float:left;
+    width:100%;
+}
+.dl-subview div.featured {
+    margin:0px;
+}
+
+.artists .artistSlot .mediaObj {
+    margin: 0;
+}
+
+.artists .artistSlot .mediaObj {
+    margin: 0;
+    padding: 0;
+}
+.artists .artistSlot .mediaObj .artistInfo p:nth-child(2) {
+    width: 100%;
+}
+.dl-menu.artists li.headline:nth-child(3n) {
+    xpadding-left: 0px;
+    xmargin-left: 10px;
+}
+
+.artists li.mediaObj {
+    padding: 12px 0 12px 12px;
+    //margin-left: 11px;
+}
+
+.artists a.mediaObj {
+    border: none;
+    // padding-top: 10px;
+}
+
+/* download button */
+.customArtistButtonText, .customArtistButtonTextRoot {
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color:#ff5c29;
+    color: #fff;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight:200;
+    justify-content: center;
+    height: 44px;
+    //margin: 43px 10% 45px 10%;
+    text-transform: uppercase;
+}
+
+.customArtistButtonText a, .customArtistButtonTextRoot a {
+    color: #fff;
+}
+.customArtistButtonTextRoot a{
+    width:100%;
+    text-align:center;
+}
+.customArtistButtonText{
+    margin-bottom:70px;
+    background:transparent;
+}
+.customArtistButtonText a{
+    font-weight:200;
+    background-color:#ff5c29;
+    padding:0px 50px;
+    height:44px;
+    line-height:44px;
+}
+.customArtistButtonText a p{
+    margin:0px; padding:0px;
+}
+/*---text caption*/
+.artists .artistSlot .mediaObj .artistInfo {
+    /*position: absolute;
+    top: 0;
+    left: 142px;
+    width: 163px;*/
+    float:left;
+    width:calc( 100% - 120px );
+    padding:5px 0 0 22px;
+    max-height:120px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+#artist-tab-d .artists .artistSlot .mediaObj {
+    border: none;
+}
+
+img.media {
+    max-height: 120px;
+    max-width: 120px;
+    min-height: 120px;
+    min-width: 120px;
+}
+
+img.media, .artistShare a .media {
+    float: left;
+    object-fit: cover;
+}
+
+.artistShare a .media {
+    // max-height: 53px;
+    // max-width: 53px;
+    // min-height: 39px;
+    // min-width: 39px;
+}
+
+.artistShare a p {
+    /*left: 15%;
+    position: absolute;
+    top: 35%;*/
+    text-transform: uppercase;
+    padding: 0;
+    float:left;
+    margin:0px 0px 0px 12px;
+    font-family:'Oswald';
+    font-size:16px;line-height:36px;
+}
+
+.mediaObj, .bd {
+//  overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+}
+
+/*-------- 00C headliner/side artist ribbon --------*/
+.ribbon {
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
+    width: 95px;
+    height: 95px;
+    text-align: center;
+}
+.ribbon span {
+  font-family: Oswald;
+  font-size: 10px;
+  xfont-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 147px;
+  display: block;
+  xbackground: #79A70A;
+  xbackground: linear-gradient(#FF5D2B 0%, #cc4506 100%);
+  background-color:#ff5b16;
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 24px;
+  right: -39px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #cc4506;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #cc4506;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #cc4506;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #cc4506;
+}
+
+
+/*-------- OOD flyin module --------*/
+.tab-container .dl-submenu {
+    display: none;
+    //overflow: hidden;
+}
+
+.dl-submenu {
+    height: 100%;
+}
+
+.full {
+    object-fit: cover;
+    max-height: 365px;
+    /*margin-top: 19px;*/
+    width: 100%;
+}
+.bg {
+    position: relative;
+    height:0px;
+    padding-top:51.5%;
+    background-repeat:no-repeat;
+    background-position:center top;
+    background-size:cover;
+}
+.bg img{
+    opacity:0;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+}
+
+.flyinProfileGrad {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1));
+    background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1));
+    background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1));
+    background: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1));
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /*padding: 0 0 17px 21px;*/
+}
+
+/* show hide stuff */
+.siconcircle.fb.hide, .siconcircle.yt.hide, .siconcircle.tw.hide, .siconcircle.ig.hide, .siconcircle.ws.hide {
+    display: none;
+}
+li.etabs-nav.tab.hide, .tab-container .panel-container .customArtistButtonTextRoot.hide, .widgetMessage.hide, .places.hide, .month.hide, .days.hide {
+    display: none!important;
+}
+
+#artist-inner-container .artistShare.mediaObj {
+    border: none;
+}
+
+.dl-subviewopen .dl-menu.artists li.mediaObj:nth-child(3n){
+    padding: 0;
+}
+
+.dl-subviewopen .dl-menu.artists li.mediaObj:nth-child(2n){
+    padding: 0;
+}
+.widgetMessage-container{
+    display:table;
+    width:100%;
+}
+.widgetMessage {
+    //margin: 36px 0 31px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: Oswald;
+    text-align: center;
+    display:table-cell;
+    height:87px;
+    vertical-align:middle;
+}
+
+/*------Movie tab*/
+.embed-container {
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    /*margin-bottom:30px;*/
+    max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-container h4 {
+    /*margin: 0 21px 0 0;*/
+    margin-top:0px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.tab-container .panel-container {
+    display: block;
+    font-family: Droid Sans;
+    margin: 0;
+    height: 100%
+}
+
+.artist-tab-inner{
+    background:#000;
+    height:calc( 100vh - 159px );
+}
+
+#nested-tab-2, #nested-tab-3{
+    display:none;
+}
+
+// .rootTab .tab-container .grid  {
+//  padding: 0 19px 0px 19px;
+// }
+
+
+// #nested-tab-1, #nested-tab-2 .tab-container .panel-container, #nested-tab-3 .tab-container .panel-container  {
+//     padding: 0 19px 0px 19px;
+// }
+
+
+.globalschedule, .globalabout, .globalvideo, .globalshare {
+    height: 100%;
+    xpadding-top: 20px;
+}
+
+.globalabout {
+    background-color: #fff;
+    padding-top:0px;
+}
+
+.abouttext {
+    background-color: #fff;
+    padding: 28px 34px 11px 34px;
+    color:#737384;
+    font-size:14px;
+}
+
+.abouttext:last-child {
+    padding-bottom:62px;
+}
+
+.abouttext p:last-child {
+    margin-bottom: 24px;
+}
+
+.abouttext h4 {
+    font-size: 20px;
+    color:#000;
+}
+.abouttext h3 {
+    font-size: 22px;
+    color:#000;   
+}
+
+.globalshare {
+    /*background-color: #000;*/
+}
+
+.flyinArtistProfile .artistInfo {
+    bottom: 1%;
+    left: 52px;
+    position: absolute;
+}
+
+.dl-submenu .artistWrapper {
+    padding:0 34px 51px 34px;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flexbox-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background:#000;
+    position:relative;
+}
+.dl-submenu .artistWrapper h2{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    color: #fff;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-weight: 200;
+    top: -40px;
+    font-size:24px;
+}
+
+/* specific to schedule tab on flyin */
+.dl-submenu .artistWrapper .artistInfo {
+    color: #fff;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+    height: 80px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flexbox-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/* specific to share tab on flyin */
+.dl-submenu .artistWrapper .artistInfo {
+    color: #fff;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+    height: 80px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flexbox-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+.dl-submenu .artistTime {
+    color: #ff5d2b;
+}
+
+ul.dl-submenu .artistWrapper .artistInfo {
+    margin-top:20px;
+    padding-bottom:30px;
+    border-bottom: 1px solid #777880;
+}
+
+ul.dl-submenu .artistWrapper .artistInfo:last-child {
+    border: none;
+}
+
+.socialfooter {
+    position: fixed;
+    bottom:0px;
+    width: 100%;
+    //height: 50px;
+    border-top: 1px solid #dbdbea;
+    background: #f7f7f7;
+}
+
+.socialIcons {
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background: #f5f5f5;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flexbox-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px;
+    height:100%;
+}
+
+.socialfooter .socialIcons a{
+    height:100%;
+    border-left:1px solid #dbdbea;
+	height:50px;
+}
+.socialfooter .socialIcons a:last-child{
+    border-right:1px solid #dbdbea;
+}
+.socialfooter .socialIcons a[href=""]{
+    display:none;
+}
+.socialfooter .socialIcons a[href=""]:last-child{
+    display:block;
+    border-right:none;
+}
+.siconcircle {
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: 50%;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 36px;
+    margin: 8px 21px 0px;
+    width: 36px;
+}
+.artistWrapper .siconcircle{
+    margin:0px;
+}
+
+.artistWrapper .artistShare.mediaObj {
+    margin-top: 30px;
+    cursor:pointer;
+}
+
+.fb, .tw, .ml, .gc, .yt, .ig, .en, .ws {
+    font-size: 20px;
+}
+
+.fb {
+    background-color: #395799;
+}
+
+.tw {
+    background-color: #02b1eb;
+}
+
+.ml {
+    background-color: #af56e3;
+}
+
+.gc {
+    background-color: #8da600;
+}
+
+.yt {
+    background-color: #cc181e;
+}
+
+.ig {
+    background-color: #cf6c21;
+}
+.en, .ws {
+    background-color: #b354e3;
+}
+
+.dl-submenu .artistInfo p:last-child {
+    padding: 0;
+    margin: 0;
+}
+
+.dl-submenu .artistInfo p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 18px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.dl-submenu .artistInfo p span.artistPlace {
+    color: #a6a6a6;
+}
+
+
+.dl-submenu .artistTime {
+    color: #ff5d2b;
+}
+
+div.tab-container.top{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    // top: 45px;
+    top: 0px;
+    // position: fixed;
+    position: relative;
+}
+
+.dl-submenu li.dl-back.top {
+    position: fixed!important;
+    top: 0px;
+    z-index: 1;
+}
+
+
+.dl-submenu li.dl-back:after {
+    color: rgba(212,204,198,0.3);
+    left: 10px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+
+}
+
+.dl-submenu li.dl-back > a {
+    //-webkit-flex-align: center;
+    //-ms-flex-align: center;
+    //-webkit-align-items: center;
+    align-items: center;
+    background-color: #ff5c29;
+    color: #fff;
+    //display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    //display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    //display: -ms-flexbox;      /* TWEENER - IE 10 */
+    //display: -webkit-flex;     /* NEW - Chrome */
+    //display: flex;
+    font-size: 18px;
+    font-weight: 200;
+    justify-content: center;
+    //padding: 12px 12px 12px 40px;
+    text-transform: uppercase;
+    overflow: hidden;
+    height:44px;
+    line-height:44px;
+    text-align:center;
+    font-family:'Oswald';
+}
+
+.dl-submenu li.dl-back > i {
+    color: #fff;
+    cursor: pointer;
+    xleft: 5%;
+    left:20px;
+    position: absolute;
+    xtop: 45%;
+    xtransform: translate(-50%,-50%) scaleX( 0.5 );
+    transform:scaleX( 0.5 );
+    z-index: 10;
+    font-size:35px;
+    line-height:44px;
+}
+
+.dl-submenu .flyinArtistProfile {
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    justify-content: center;
+    position: relative;
+    text-shadow: 2px 2px #000;
+    text-transform: uppercase;
+}
+
+.flyinArtistProfile .artistInfo {
+    bottom: 1%;
+    left: 52px;
+    position: absolute;
+}
+
+.scheduleSlot {
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color:#000;
+    border-bottom: 1px solid #535354;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+    height: 80px;
+    justify-content: left;
+}
+
+.scheduleSlot:last-child {
+    border: none;
+}
+
+.aboutSlot {
+    background-color: #fff;
+}
+/*-------- OOZ interaction specific --------*/
+.shade {
+    opacity: 0.2;
+}
