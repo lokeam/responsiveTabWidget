@@ -2,7 +2,7 @@
     var 
         target = d.querySelector( w.lineupSettings.target ),
         settings = JSON.stringify( w.lineupSettings ),
-        baseurl = "http://tsm-festival-lineup-widget.s3.amazonaws.com/",
+		baseurl = w.lineupSettings.useAmazon ? "http://tsm-festival-lineup-widget.s3.amazonaws.com/" : "http://wac.450f.edgecastcdn.net/80450F/townsquaredigital.com/lineup-widget/",
     	html = "<!doctype html>"+
 "<html>"+
     "<head>"+
@@ -34,11 +34,7 @@
                 "fjs.parentNode.insertBefore(js, fjs);"+
             "}(document, 'script', 'facebook-jssdk'));"+
         "</script>"+
-        "<script type='text/javascript' src='" + baseurl + "js/jquery-1.7.2.min.js'></script>"+
-        "<script type='text/javascript' src='" + baseurl + "js/modernizr.custom.js'></script>"+
-        "<script type='text/javascript' src='" + baseurl + "js/tabs.js'></script>"+
-        "<script type='text/javascript' src='" + baseurl + "js/transitions2.js'></script>"+
-        "<script type='text/javascript' src='" + baseurl + "js/lineupwidget.js'></script>"+
+        "<script type='text/javascript' src='" + baseurl + "js/lineupwidget.min.js'></script>"+
     "</body>"+
 "</html>",
 		ifr = d.createElement( 'iframe' );

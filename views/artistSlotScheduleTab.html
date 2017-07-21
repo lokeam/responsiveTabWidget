@@ -1,0 +1,12 @@
+<li id='{{this.id}}' class='artistSlot mediaObj'>
+    <a class='mediaObj' href='javascript:'>
+        <img class='media' src='https://s3.amazonaws.com/tsm-images/global/1x1.gif' data-echo='{{cleanImageUrl this.artistInfo.imageURL}}?w=120&h=120&a=t'>
+            <div class='artistInfo'>
+                <p class='artist-title'>{{this.title}}<span class='artist-subtitle'>{{this.subtitle}}</span></p>
+                <p><span class='artistTime'>{{this.originalFormattedStartDay}} {{this.formattedTimeStart}} - {{this.formattedTimeEnd}}</span>
+                <span class='artistPlace'>{{this.venueId}}</span></p>
+            </div>
+    </a>
+<!--     Artist flyin -->
+    {{> flyin}}
+</li>

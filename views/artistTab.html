@@ -1,0 +1,31 @@
+<div id='nested-tab-1' class='rootTab'>
+
+    {{#if settings.widgetMessage}}
+        <div class='widgetMessage-container'><div class='widgetMessage'>{{settings.widgetMessage}}</div></div>
+    {{/if}}
+
+    <ul id='artists' class='dl-menu dl-menuopen artists'>
+        <div class='featured'>
+
+            {{#each artists}}
+                {{#unless this.mediaObj}}
+                    {{> artistSlot}}
+                {{/unless}}
+            {{/each}}
+
+        </div>
+
+        {{#each artists}}
+            {{#if this.mediaObj}}
+                <div class='artist-row-separator'></div>
+                {{> artistSlot}}
+            {{/if}}
+        {{/each}}
+
+    </ul>
+
+    {{#if settings.buttonText}}
+        {{> customArtistButton}}
+    {{/if}}
+
+</div>

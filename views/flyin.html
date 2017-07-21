@@ -1,0 +1,140 @@
+<ul class='dl-submenu'>
+    <div id='artist-inner-container' class='tab-container globalabout-active'>
+        <ul class='etabs'>
+            <li class='etabs-nav tab {{this.flyin.scheduleTab}}'>
+                <a href='#artist-tab-a' class='embed-{{this.flyin.id}}'>schedule</a>
+            </li>
+            <li class='etabs-nav tab {{this.flyin.aboutTab}}'>
+                <a href='#artist-tab-b' class='embed-{{this.flyin.id}}'>about</a>
+            </li>
+            <li class='etabs-nav tab {{this.flyin.videoTab}}'>
+                <a id='video' href='#artist-tab-c' class='globalvideo embed-{{this.flyin.id}}'>video</a>
+            </li>
+            <li class='etabs-nav tab {{this.flyin.mediaTab}}'>
+                <a href='#artist-tab-d' class='embed-{{this.flyin.id}}'>share</a>
+            </li>
+        </ul>
+        <div class='panel-container'>
+            <div class='bg' data-echo-background='{{cleanImageUrl this.flyin.artistDetail.generics.generic1}}?w=960&a=t'>
+                <img class='full' src='https://s3.amazonaws.com/tsm-images/global/1x1.gif' data-echo='{{cleanImageUrl this.flyin.artistDetail.generics.generic1}}?w=960&a=t'/>
+                <div class='flyinProfileGrad'></div>
+            </div>
+
+            <div id='artist-tab-a' class='globalschedule' data-containername='globalschedule'>
+                <div class='artistWrapper'>
+                    <h2>{{this.flyin.title}}<span class='artist-subtitle'>{{ifValEmpty this.flyin.subtitle}}</span></h2>
+
+                    <!-- render venues in schedule tab of artist flyin -->
+                    {{#each this.flyin.venues}}
+                        <div class='artistInfo'>
+                            <p>{{this.formattedStartMonth}} {{this.startDateDayOnly}}</p>
+                            <p>
+                                <span class='artistTime'>{{this.formattedTimeStart}} - {{this.formattedTimeEnd}}</span>
+                                <span class='artistPlace'>{{divider this.venueId this.formattedTimeStart}} {{this.venueId}}</span>
+                            </p>
+                        </div>  
+
+                    {{/each}}
+                </div>
+            </div>
+
+            <!-- render about tab of artist flyin -->
+            <div id='artist-tab-b' class='globalabout' data-containername='globalabout'>
+                <div class='abouttext'>
+                    <h4>{{this.flyin.title}}</h4> {{{replaceChars this.flyin.artistDetail.main.description}}}
+                </div>
+
+                {{#if this.customArtistButtonText}}
+                    <div class='customArtistButtonText'>
+                        <a target='_blank' href='{{this.flyin.customArtistLink}}'>
+                            <p>{{this.flyin.customArtistButtonText}}</p>
+                        </a>
+                    </div>
+                {{/if}}
+            </div>
+
+            <!-- render the video tab of artist flyin -->
+            <div id='artist-tab-c' class='globalvideo embed-{{this.flyin.id}} video' data-containername='globalvideo'>
+                {{#if this.flyin.embedvideos}}
+                    {{#each this.flyin.embedvideos}}
+
+                        <div class='embed-container'>
+                            <iframe class='videoembed-{{@index}}-{{../this.objectId}}' src='' frameborder='0' allowfullscreen></iframe>
+                        </div>
+
+                    {{/each}}
+
+                {{/if}}
+            </div>
+
+            <!-- render share tab of artist flyin -->
+            <div id='artist-tab-d' class='globalshare' data-containername='globalshare'>
+                <div class='artistWrapper'>
+                    <h2>Share</h2>
+                    <div class='artistShare mediaObj'>
+                        <a target='_blank' data-shareimage='{{cleanImageUrl this.flyin.imageURL}}' data-shareurl='{{@root.baseURL}}#artists/{{this.flyin.id}}/{{this.flyin.sanitizedName}}' data-festivalname='{{@root.compFestivalName}}' data-artistname='{{this.flyin.sanitizedName}}' href='{{this.flyin.facebook}}' class=''>
+                            <div class='siconcircle fb media'>
+                                <i class='fa fa-facebook-f'></i>
+                            </div>
+                            <p>share on facebook</p>
+                        </a>
+                    </div>
+                    <div class='artistShare mediaObj'>
+                        <a target='_blank' href='{{this.flyin.twitter}}' data-shareurl='{{@root.baseURL}}#artists/{{this.id}}/{{this.flyin.sanitizedName}}' data-festivalname='{{@root.compFestivalName}}' data-artistname='{{this.flyin.title}}' class=''>
+                            <div class='siconcircle tw media'>
+                                <i class='fa fa-twitter'></i>
+                            </div>
+                            <p>share on twitter</p>
+                        </a>
+                    </div>
+                    <div class='artistShare mediaObj'></div>
+                </div>
+            </div>
+        </div>
+    <!-- render the footer share icon bar -->
+        <footer class='socialfooter'>
+            <div class='socialIcons'>
+
+                {{#if this.flyin.hasweb}}
+                    <a target='_blank' href='{{this.flyin.web}}'>
+                        <div class='siconcircle ws {{this.flyin.wsToggle}}'>
+                            <i class='fa fa-bullseye'></i>
+                        </div>
+                    </a>
+                {{/if}}
+
+                {{#if this.flyin.hasfb}}
+                    <a target='_blank' href='{{this.flyin.facebook}}'>
+                        <div class='siconcircle fb {{this.flyin.fbToggle}}'>
+                            <i class='fa fa-facebook-f'></i>
+                        </div>
+                    </a>
+                {{/if}}
+
+                {{#if this.flyin.hasyt}}
+                    <a target='_blank' href='{{this.flyin.youtube_channel}}'>
+                        <div class='siconcircle yt {{this.ycToggle}}'>
+                            <i class='fa fa-youtube'></i>
+                        </div>
+                    </a>
+                {{/if}}
+
+                {{#if this.flyin.hastw}}
+                    <a target='_blank' href='{{this.twitter}}'>
+                        <div class='siconcircle tw {{this.flyin.twToggle}}'>
+                            <i class='fa fa-twitter'></i>
+                        </div>
+                    </a>
+                {{/if}}
+
+                {{#if this.flyin.hasig}}
+                    <a target='_blank' href='{{this.flyin.instagram}}'>
+                        <div class='siconcircle ig {{this.flyin.inToggle}}'>
+                            <i class='fa fa-instagram'></i>
+                        </div>
+                    </a>
+                {{/if}}
+
+            </div>
+        </footer>
+</ul>

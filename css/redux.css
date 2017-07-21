@@ -263,10 +263,13 @@ li.etabs-nav a {
     //display: -webkit-flex;     /* NEW - Chrome */
     //display: flex;
     //display: table;
-    width: 100%;
+    width:calc( 100% - 40px );
     justify-content: center;
     height:54px;
     text-align:center;
+	overflow-x:auto;
+	padding:0px 20px;
+	white-space:nowrap;
 }
 
 .days a {
@@ -303,6 +306,7 @@ ul.days li {
     display:inline-block;
     vertical-align:top;
     height:100%;
+    overflow: hidden;
 }
 
 // ul.days li:first-child {
@@ -348,6 +352,54 @@ ul.days li.active .dayofmonth {
     margin-bottom: 4px;
     line-height:13px;
 }
+.subnav-container{
+	position:relative;
+	max-width:100vw;
+}
+.subnav-container .horizontal-subnav-nav{
+	position:absolute;
+	top:0px;left:0px;
+	height:100%; width:20px;
+	transition:all 0.4s;
+	/*box-shadow:10px 0px 10px -5px rgba(101,101,101,1) inset;*/
+	background:rgba(0,0,0,0.5);
+	opacity:0;
+	cursor:pointer;
+	color:#fff;
+	line-height:44px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+.subnav-container .horizontal-subnav-nav.days-nav{
+	line-height:55px;
+}
+.subnav-container .horizontal-subnav-nav.left-nav{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.5+0,0+100 */
+	background: -moz-linear-gradient(left,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
+.subnav-container .horizontal-subnav-nav.right-nav{
+	right:0px;left:auto;
+	/*box-shadow:-10px 0px 10px -5px rgba(101,101,101,1) inset;*/
+	opacity:0;
+	background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=1 ); /* IE6-9 */
+
+}
+.subnav-container .horizontal-subnav-nav.right-nav:before{
+	content:"\f105";
+}
+.subnav-container .horizontal-subnav-nav.left-nav:before{
+	content:"\f104";
+}
+.subnav-container .horizontal-subnav-nav.on{
+	opacity:1;
+}
 
 .places {
     //display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -365,6 +417,11 @@ ul.days li.active .dayofmonth {
     // display: table;
     width: 100%;
     text-align:center;
+	white-space:nowrap;
+	padding:0px 20px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	overflow-x:auto;
 }
 
 .tab-container .places {
@@ -487,8 +544,13 @@ div.featured.topPadding {
     text-transform:capitalize;
     font-weight:400;
 }
-.artists .featured .artistSlot .artistInfo p:first-child{
+.artists .featured .artistSlot .artistInfo p.artist-title{
 	color:#fff;
+}
+.artist-subtitle{
+	opacity:0.8;
+	font-size:14px;
+	display:block;
 }
 .artists .featured~.artistSlot .artistInfo p:first-child,
 #nested-tab-2 .artists .artistSlot .artistInfo p:first-child,
@@ -656,10 +718,11 @@ div.featured {
     width: 163px;*/
     float:left;
     width:calc( 100% - 120px );
-    padding:5px 0 0 22px;
+    padding:5px 0 0 14px;
     max-height:120px;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
+    overflow: hidden;
 }
 
 #artist-tab-d .artists .artistSlot .mediaObj {
@@ -811,7 +874,8 @@ li.etabs-nav.tab.hide, .tab-container .panel-container .customArtistButtonTextRo
     display: none!important;
 }
 
-#artist-inner-container .artistShare.mediaObj {
+#artist-inner-container .artistShare.mediaObj,
+.artist-inner-container .artistShare.mediaObj {
     border: none;
 }
 
@@ -950,7 +1014,7 @@ li.etabs-nav.tab.hide, .tab-container .panel-container .customArtistButtonTextRo
 .dl-submenu .artistWrapper h2{
     padding: 0px;
     margin: 0px;
-    position: absolute;
+    position: relative;
     color: #fff;
     font-family: 'Oswald';
     text-transform: uppercase;
@@ -1006,6 +1070,10 @@ ul.dl-submenu .artistWrapper .artistInfo {
     margin-top:20px;
     padding-bottom:30px;
     border-bottom: 1px solid #777880;
+}
+
+ul.dl-submenu .artistWrapper .schedule-artistInfo-wrapper .artistInfo:first-child{
+	margin-top:0px;
 }
 
 ul.dl-submenu .artistWrapper .artistInfo:last-child {
@@ -1187,15 +1255,18 @@ div.tab-container.top{
 .dl-submenu li.dl-back > i {
     color: #fff;
     cursor: pointer;
-    xleft: 5%;
-    left:20px;
+    left:4px;
+	top:50%;
     position: absolute;
-    xtop: 45%;
-    xtransform: translate(-50%,-50%) scaleX( 0.5 );
-    transform:scaleX( 0.5 );
+    transform:translateY( -50% );
     z-index: 10;
-    font-size:35px;
-    line-height:44px;
+    font-size:18px;
+	font-weight:bold;
+    line-height:36px;
+	width:36px;
+	height:36px;
+	text-align:center;
+	background:rgba( 0,0,0,0.3 );
 }
 
 .dl-submenu .flyinArtistProfile {

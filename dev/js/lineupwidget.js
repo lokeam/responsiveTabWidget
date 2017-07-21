@@ -1,3 +1,4 @@
+		},
 (function(w,d,$){
 	//console.log('lineup widget iNiT');
 

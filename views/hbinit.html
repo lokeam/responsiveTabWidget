@@ -1,0 +1,99 @@
+<div class='tab-container dl-menuopen' id='main-outer-container'>
+
+	<!--/* Navigation Tabs Root */-->
+	<ul class='etabs' id='navtabs'>
+
+		<!--auto render artist tab by default-->
+		<li class='etabs-nav tab'><a href='#nested-tab-1'>artists</a></li>
+
+		<!--render schedule tab-->
+		{{#if hasDates}}
+		<li class='etabs-nav tab'><a href='#nested-tab-2'>schedule</a></li>
+		{{/if}}
+
+		<!--render stages tab-->
+		{{#if hasVenues}}
+		<li class='etabs-nav tab'><a href='#nested-tab-3'>stages</a></li>
+		{{/if}}
+
+	</ul>
+
+	<!--Begin Panel Container-->
+	<div class='panel-container'>
+
+		<!--/* Artists Tab */-->
+		{{> artistTab}}
+
+		<!--/* Schedule Tab */-->
+		{{#if hasDates}}
+		<div id='nested-tab-2' class='rootTab'>
+			<div class='tab-container' id='when-outer-container'>
+				<div class='month'>{{when.rootTemplate.month}}</div>
+				<ul class='etabs days'>
+
+					{{#each when.rootTemplate.compositeHBWhen}}
+					<li class='tab'>
+						<a href='#schedule/{{this.showTimeDate}}' class='active'>
+							<span>{{this.day}}</span>
+							<div class='dayofmonth'>{{this.dayOfMonth}}</div>
+						</a>
+					</li>
+					{{/each}}
+
+				</ul>
+				<div id='schedule' class='panel-container'>
+
+					{{#each when.rootTemplate.compositeHBWhen}}
+					<div id='schedule/{{this.showTimeDate}}' class='tab-{{@index}}'>
+						<ul class='dl-menu dl-menuopen artists'>
+
+							{{#each this.shows}}
+							<div class='artist-row-separator'></div>
+							{{> artistSlotScheduleTab}}
+							{{/each}}
+
+						</ul>
+					</div>
+					{{/each}}
+					{{#if settings.buttonText}}
+					{{> customArtistButton}}
+					{{/if}}
+				</div>
+			</div>
+		</div>
+		{{/if}}
+		{{#if hasVenues}}
+		<div id='nested-tab-3' class='rootTab'>
+			<div class='tab-container' id='where-outer-container'>
+				<ul class='etabs places'>
+
+					{{#each where.compositeHBWhere}}
+					<li class='tab'><a href='#stages/{{this.sanitizedName}}'>{{this.venueName}}</a></li>
+					{{/each}}
+
+				</ul>
+				<div id='stages' class='panel-container'>
+
+					{{#each where.compositeHBWhere}}
+					<div id='stages/{{this.sanitizedName}}' class='tab-{{@index}}'>
+						<ul class='dl-menu dl-menuopen artists'>
+
+							{{#each this.shows}}
+							<div class='artist-row-separator'></div>
+							{{> artistSlotVenueTab}}
+							{{/each}}
+
+						</ul>
+					</div>
+					{{/each}}
+
+					{{#if settings.buttonText}}
+					{{> customArtistButton}}
+					{{/if}}
+				</div>
+			</div>
+		</div>
+		{{/if}}
+
+	</div>
+</div>

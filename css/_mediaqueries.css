@@ -61,10 +61,6 @@
 	div.tab-container.top{
 	    /*top: 8px!important;*/
 	}
-	// .dl-menu.artists li.headline:nth-child(2n) {
-	//     padding-left: 0px;
-	//     margin-left: 10px;
-	// }
 	li.artistSlot.headline:nth-child(2n+1){
 		margin-left:0px;
 	}
@@ -80,6 +76,9 @@
 	}
 	.dl-menu.artists.dl-menuopen li.mediaObj:nth-child(4n+5) {
 	    padding-left: 12px;
+	}
+	.dl-menu.artists.dl-menuopen li.mediaObj.dl-subviewopen:nth-child(4n+5) {
+		padding-left: 0px;
 	}
 	.dl-menu.artists li.mediaObj:nth-child(2n+1) {
 	    padding-left: 12px;
@@ -115,7 +114,7 @@
 		padding:0px 5px;
 	}
 	.artists .headline, .artists .mediaObj {
-	    //margin: 0 0 7px 11px;
+	    
 	}
 	ul.dl-submenu .artistWrapper div {
     	border: none;
@@ -142,6 +141,10 @@
 	#nested-tab-2 .dl-menu.artists li.mediaObj:nth-child(4n), #nested-tab-3 .dl-menu.artists li.mediaObj:nth-child(4n) {
 	    padding-left: 12px;
 	    margin-left: 0px;
+	}
+	#nested-tab-2 .dl-menu.artists li.mediaObj:nth-child(4n), #nested-tab-3 .dl-menu.artists li.mediaObj.dl-subviewopen:nth-child(4n),
+	#nested-tab-3 .dl-menu.artists li.mediaObj:nth-child(4n), #nested-tab-3 .dl-menu.artists li.mediaObj.dl-subviewopen:nth-child(4n) {
+		padding-left:0px;
 	}
 
 	.dl-menuopen .artist-row-separator:nth-child(4n-2){
@@ -176,10 +179,6 @@
 	    margin: 0;
 	}
 	.artists .artistSlot .mediaObj .artistInfo {
-	    //position: absolute;
-	    // top: 0;
-	    // left: 142px;
-	    // width: 163px;
 	    padding:18px 0 0 22px;
 	}
 
@@ -205,10 +204,8 @@
 	    width: 100% !important;
 	}
 	.artists .artistSlot .mediaObj .artistInfo p {
-	    //width: 90%;
 	}
 	/*.artists .media {
-		//border-top: 1px solid #777880;
 		margin-bottom: 0;
 		padding: 14px 0 17px 0;
 	}*/
@@ -226,9 +223,6 @@
 	    padding: 6px 0 17px 0;
 	}*/
 	.artists .artistSlot .mediaObj .artistInfo {
-	    // position: absolute;
-	    // top: 73%;
-	    // left: 40%;
 	}
 	.places li {
 		font-size: .8em;
@@ -240,13 +234,8 @@
 	.dl-submenu .artistWrapper {
 	    padding: 0 20px;
 	}
-	// .artists .media {
-	//     margin-bottom: 0;
-	//     padding: 7px 7px 7px 7px;
-	// }
 	.etabs-nav {
 	    /*padding: 17px 7px;*/
-
 	}
 	.full {
     	max-height: 180px;
@@ -272,6 +261,4 @@
 	.dl-menuopen .artist-row-separator:nth-child(n){
 		display:block;
 	}
-}
-
 }

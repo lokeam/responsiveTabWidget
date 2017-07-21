@@ -1,0 +1,128 @@
+<html>
+	<body>
+	<script>
+		var venues = [
+			{
+				id: "52",
+				title: "Dolan's Lake Park",
+				imageURL: "",
+				subtitle: "",
+				address2: "",
+				city: "Hunter",
+				state: "NY",
+				zip: "",
+				latitude: "",
+				longitude: "",
+				sortOrder: "4"
+			},
+			{
+				id: "50",
+				title: "Healey Brothers Hall",
+				imageURL: "",
+				subtitle: "",
+				address2: "",
+				city: "Hunter",
+				state: "NY",
+				zip: "12442",
+				latitude: "",
+				longitude: "",
+				sortOrder: "3"
+			},
+			{
+				id: "49",
+				title: "casd 1",
+				imageURL: "",
+				subtitle: "",
+				address2: "",
+				city: "Hunter",
+				state: "NY",
+				zip: "12442",
+				latitude: "",
+				longitude: ""
+			},
+			{
+				id: "49",
+				title: "bsd2",
+				imageURL: "",
+				subtitle: "",
+				address2: "",
+				city: "Hunter",
+				state: "NY",
+				zip: "12442",
+				latitude: "",
+				longitude: ""
+			},
+			{
+				id: "48",
+				title: "Mountain Stage",
+				imageURL: "",
+				subtitle: "",
+				address2: "",
+				city: "Hunter",
+				state: "NY",
+				zip: "12442",
+				latitude: "",
+				longitude: "",
+				sortOrder: "1"
+			},
+			{
+				id: "49",
+				title: "Valley Stage",
+				imageURL: "",
+				subtitle: "",
+				address2: "",
+				city: "Hunter",
+				state: "NY",
+				zip: "12442",
+				latitude: "",
+				longitude: "",
+				sortOrder: "2"
+			},
+			{
+				id: "49",
+				title: "asd 1",
+				imageURL: "",
+				subtitle: "",
+				address2: "",
+				city: "Hunter",
+				state: "NY",
+				zip: "12442",
+				latitude: "",
+				longitude: ""
+			}
+		];
+
+		/*for( var i=0;i<venues.length;i++ ){
+			if( !venues[i].sortOrder ){
+				venues[i].sortOrder = 0;
+			}else{
+				venues[i].sortOrder = parseInt( venues[i].sortOrder, 10 );
+			}
+		}*/
+		var l = venues.length;
+		for( var i=0;i<l;i++ ){
+			if( venues[i].sortOrder === undefined ){
+				var temp = venues[i];
+				venues = [].concat( venues.slice(0,i), venues.splice(i+1, venues.length ), temp );
+				l--;
+				i--;
+			}
+		}
+
+		venues.sort(function( a, b ){
+			if( a.sortOrder === undefined && b.sortOrder === undefined ){
+				//console.log( a.title, b.title );
+				return a.title.localeCompare( b.title );
+			}
+			return a.sortOrder > b.sortOrder;
+		});
+
+		echo( venues );
+		function echo( venues ){
+			for( var i=0;i<venues.length;i++ ){
+				console.log( venues[i].title );
+			}
+		}
+	</script>
+	</body>
+</html>
