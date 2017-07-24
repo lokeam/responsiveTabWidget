@@ -12,12 +12,11 @@
         "<meta name='description' content=''>"+
         "<meta name='viewport' content='width=device-width, initial-scale=1'>"+
         "<link href='https://fonts.googleapis.com/css?family=Droid+Sans|Oswald:400,700|Oswald:Light' rel='stylesheet' type='text/css'>"+
-        "<link rel='stylesheet' type='text/css' href='" + baseurl + "css/redux.css'>"+
-        "<link rel='stylesheet' type='text/css' href='" + baseurl + "css/_mediaqueries.css'>"+
-        "<link rel='stylesheet' type='text/css' href='" + baseurl + "css/_animations.css'>"+
+        "<link rel='stylesheet' type='text/css' href='" + baseurl + "css/dist/styles.css'>"+
         "<script type='text/javascript'>var lineupSettings = " + settings + ";</script>"+
     "</head>"+
     "<body class='content-wrap'>"+
+        "<div id='content-wrap'></div>"+
         "<script>"+
             "window.fbAsyncInit = function() {"+
                 "FB.init({"+
@@ -34,11 +33,11 @@
                 "fjs.parentNode.insertBefore(js, fjs);"+
             "}(document, 'script', 'facebook-jssdk'));"+
         "</script>"+
-        "<script type='text/javascript' src='" + baseurl + "js/lineupwidget.min.js'></script>"+
+        "<script type='text/javascript' src='" + baseurl + "js/dist/hb.min.js'></script>"+
+        "<script type='text/javascript' src='" + baseurl + "js/dist/lineupwidget.min.js'></script>"+
     "</body>"+
 "</html>",
 		ifr = d.createElement( 'iframe' );
-
     ifr.src='javascript:""';
     ifr.id='lineupwidget-iframe';
     ifr.height="100%";

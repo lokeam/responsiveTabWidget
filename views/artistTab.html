@@ -5,7 +5,7 @@
     {{/if}}
 
     <ul id='artists' class='dl-menu dl-menuopen artists'>
-        <div class='featured'>
+        <div class='{{#if settings.widgetMessage}}featured{{else}}featured topPadding{{/if}}'>
 
             {{#each artists}}
                 {{#unless this.mediaObj}}
