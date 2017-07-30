@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 					"js/jquery-1.7.2.min.js",
 					"js/modernizr.custom.js",
 					"js/tabs.js",
-					"js/transitions2.js",
+					"js/transitions.js",
 					"js/lineupwidget.dev.js",
 				],
 				dest : 'js/dist/lineupwidget.dev.js'
